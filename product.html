@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sindi Ayuna Hustani</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+	<!-- header -->
+	<header>
+		<div class="navbar"></div>
+		<div class="container">
+		<h1><a href="index.php"></a>SUNNYCRAFTIE</h1>
+		<ul>
+			<li><a href="index.php">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+			<li class="active"><a href="product.html">PRODUCT</a></li>
+			<li><a href="order.php">ORDER</a></li>
+			<li><a href="contact.html">CONTACT</a></li>
+		</ul>
+		</div>
+	</header>
+    <br>
+    <section class="product">
+        <div class="container">
+            <br><br><br><br>
+            <h3>PRODUCT</h3>
+            <h4>Macam-macam Produk</h4>
+		<ul>
+			<li><img src="foto/1.png"><b><p>Strapmask Butterfly</p></b></li>
+            <li><img src="foto/2.png"><b><p>Strapmask Mutiara</p></b></li>
+            <li><img src="foto/3.png"><b><p>Konektor Infinite </p></b></li>
+            <li><img src="foto/4.png"><b><p>Strapmask Soft Colour</p></b></li>
+            <li><img src="foto/5.png"><b><p>Strapmask Batu Hitam</p></b></li>
+            <li><img src="foto/6.png"><b><p>Konektor Mutiara</p></b></li>
+		</ul>
+        </div>
+    </section>
+
+	<!-- footer -->
+	<footer>
+		<div class="container">
+			<small> Copyright &copy; 2021 - Sindi Ayuna Hustani, All Rights Reserved.</small>
+		</div>
+	</footer>
+
+	<!--Javascript-->
+	<script>
+		let arr = [];
+		let total = document.querySelector("#total");
+
+		function calculateAmount(val){
+			let divObj = document.querySelector("#tot_amount");
+			
+			divObj.value = val;
+			
+			arr.push(parseInt(divObj.value));
+			
+			console.log(arr);
+
+			let sums = arr.reduce((a, b) => a + b);
+			
+			total.innerHTML = sums;
+		}
+	</script>
+</body>
+</html>
